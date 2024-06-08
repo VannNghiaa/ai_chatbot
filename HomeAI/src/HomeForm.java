@@ -32,26 +32,13 @@ public class HomeForm extends JFrame {
 
     public HomeForm() {
 
-        text_Area = new JTextArea();
-        //homePanel = new JPanel();
-        btnSend = new JButton();
-        text_input = new JTextField();
-        label_text = new JLabel();
-
-        JFrame f = new JFrame();
-        f.setSize(480, 500);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
-        f.setResizable(false);
-        f.setTitle("Home Page");
-        f.setLayout(null);
-        f.setContentPane(homePanel);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       // f.add(text_Area); //ca
-       // f.add(text_input); //cf
-        //f.add(btnSend); //b
-        //f.add(label_text); //l
-       //btnSend.add(label_text);
+        this.setSize(480, 500);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        this.setResizable(false);
+        this.setTitle("Home Page");
+        this.setContentPane(homePanel);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         btnSend.addActionListener(new ActionListener() {
@@ -68,9 +55,9 @@ public class HomeForm extends JFrame {
                         Reply("Tôi ổn, cảm ơn lời hỏi thăm của bạn. Còn bạn thì sao?");
                     } else if (text.contains("tên bạn là gì?")) {
                         Reply("Tôi là Chatbot, tên bạn là gì?");
-                    } else if (text.contains("Tôi yêu bạn")) {
+                    } else if (text.contains("i love u")) {
                         Reply("Đẹp trai không? Kinh tế bạn như nào mà đòi yêu?");
-                    } else if (text.contains("Bye")) {
+                    } else if (text.contains("bye")) {
                         Reply("Trở lại sớm nhé, tôi luôn chờ bạn!");
                     } else {
                         Reply("Tôi không hiểu bạn đang muốn nói điều gì");
@@ -82,15 +69,6 @@ public class HomeForm extends JFrame {
                 text_Area.append("Chatbot: " + s + "\n");
             }
         });
-
-
-//        text_input.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                System.out.println("Input sent");
-//            }
-//        });
-//    }
     }
 }
 
